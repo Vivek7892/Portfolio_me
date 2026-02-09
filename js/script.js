@@ -283,15 +283,10 @@ window.addEventListener('load', () => {
 
 // Load Profile Image from Admin Panel
 function loadProfileImage() {
-    const imageData = localStorage.getItem('profileImageData');
-    const profileImg = document.querySelector('#heroProfilePic img');
+    // Profile image is now directly in images/profile.jpg
+    // No need to load from localStorage
     
-    // Only replace if admin uploaded a custom image
-    if (imageData && profileImg) {
-        profileImg.src = imageData;
-    }
-    
-    // Load Resume Link
+    // Load Resume Link if exists
     const resumeData = localStorage.getItem('resumeData');
     const resumeFileName = localStorage.getItem('resumeFileName');
     const downloadBtn = document.getElementById('downloadResume');
