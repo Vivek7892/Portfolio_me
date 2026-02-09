@@ -271,7 +271,7 @@ function loadEducation() {
         <div class="item-card">
             <div>
                 <h3>B.E. in Computer Science (Data Science)</h3>
-                <p>ATME College of Engineering, Mysuru - CGPA: 8.27</p>
+                <p>ATME College of Engineering, Mysuru - CGPA: 8.37</p>
             </div>
         </div>
         <div class="item-card">
