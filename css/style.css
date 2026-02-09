@@ -1075,28 +1075,32 @@ section {
     }
 
     .hero-profile-pic {
-        width: 300px;
-        height: 300px;
+        width: 280px;
+        height: 280px;
         margin: 0 auto;
     }
 
     .hero-profile-pic img {
-        width: 250px;
-        height: 250px;
+        width: 230px;
+        height: 230px;
         border-radius: 50%;
     }
 
     .open-to-work-badge {
-        bottom: 10px;
-        right: -5px;
-        padding: 6px 15px;
+        bottom: 15px;
+        right: 10px;
+        padding: 5px 12px;
+        font-size: 0.7rem;
+        gap: 4px;
+    }
+    
+    .open-to-work-badge i {
         font-size: 0.75rem;
     }
 
     .hero-blob {
-        width: 300px;
-        height: 300px;
-        margin: 0 auto;
+        width: 280px;
+        height: 280px;
     }
 
     .skills-slider-wrapper {
@@ -1145,11 +1149,11 @@ section {
 
 @media (max-width: 600px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero-buttons {
@@ -1160,6 +1164,8 @@ section {
     .btn {
         width: 100%;
         text-align: center;
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 
     .projects-grid {
@@ -1169,5 +1175,27 @@ section {
     .education-card {
         flex-direction: column;
         text-align: center;
+    }
+    
+    .hero-profile-pic {
+        width: 240px;
+        height: 240px;
+    }
+
+    .hero-profile-pic img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .open-to-work-badge {
+        bottom: 10px;
+        right: 5px;
+        padding: 4px 10px;
+        font-size: 0.65rem;
+    }
+    
+    .hero-blob {
+        width: 240px;
+        height: 240px;
     }
 }
