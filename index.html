@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vivek V - AI & Full Stack Developer | Final Year CSE Student specializing in AI, GenAI, and Full Stack Development">
+    <meta name="keywords" content="AI Developer, Full Stack Developer, Machine Learning, RAG Chatbots, Portfolio">
+    <meta name="author" content="Vivek V">
+    <title>Vivek V | AI & Full Stack Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">Vivek<span>.dev</span></div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm <span class="gradient-text">Vivek V</span></h1>
+                <h2 class="hero-subtitle">AI & Full Stack Developer</h2>
+                <p class="hero-description">Building intelligent applications with AI, GenAI, and modern web technologies</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="resume/VIVEK_V.pdf" class="btn btn-secondary" id="downloadResume" download="VIVEK_V.pdf">Download Resume</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-profile-pic" id="heroProfilePic">
+                    <img src="images/profile.jpg" alt="Vivek V - AI & Full Stack Developer" onerror="this.style.display='none'">
+                    <a href="https://linkedin.com/in/vivek-v-a0a41225a" target="_blank" class="open-to-work-badge">
+                        <i class="fas fa-briefcase"></i>
+                        Open to Work
+                    </a>
+                    <div class="hero-blob"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a final-year <strong>Computer Science & Data Science Engineering</strong> student with a passion for creating innovative AI-powered solutions and modern web applications.</p>
+                    <p>My expertise lies in <strong>Artificial Intelligence, Generative AI, RAG-based chatbots,</strong> and <strong>Full Stack Development</strong>. I enjoy building intelligent systems that solve real-world problems and enhance user experiences.</p>
+                    <p>With strong communication skills and a collaborative mindset, I'm actively seeking opportunities as a <strong>Software Developer</strong> or <strong>AI Engineer</strong> where I can contribute to impactful projects and continue growing professionally.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3>8.37</h3>
+                            <p>CGPA</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>10+</h3>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>1+</h3>
+                            <p>Internship</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-slider-wrapper">
+                <button class="slider-btn prev-btn" id="skillsPrev" aria-label="Previous skills">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="skills-slider" id="skillsSlider">
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <h3>Programming</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Web Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Frontend</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Mobile Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">Dart</span>
+                            <span class="skill-tag">Android</span>
+                            <span class="skill-tag">iOS</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                        <h3>AI & Data Science</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">RAG</span>
+                            <span class="skill-tag">LangChain</span>
+                            <span class="skill-tag">LLM APIs</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Tools & Platforms</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Flask</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn next-btn" id="skillsNext" aria-label="Next skills">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI-Powered Student Assistant Chatbot Using RAG and Langchain</h3>
+                        <p>RAG-based intelligent chatbot designed to assist students with queries, providing contextual answers using retrieval-augmented generation techniques.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>LangChain</span>
+                            <span>RAG</span>
+                            <span>LLM</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Vivek7892/AI-powered-Student-Chatbot-using-RAG-with-Langchain.git" class="btn-icon" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="btn-icon" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Detection of DDoS Attacks using Clustering and Machine Learning</h3>
+                        <p>Built an intrusion detection system to identify abnormal network traffic patterns. Used Scikit-learn and Pandas for preprocessing and model training. Visualized attack detection results using Matplotlib.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                            <span>Pandas</span>
+                            <span>Matplotlib</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Vivek7892/DDoS-Detection-in-SDN-with-ML.git" class="btn-icon" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="btn-icon" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Flutter Weather App</h3>
+                        <p>Cross-platform mobile weather application built with Flutter, integrating OpenWeather API for real-time weather data and forecasts.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>API Integration</span>
+                            <span>Mobile</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Vivek7892/Weather_app_Flutter.git" class="btn-icon" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="btn-icon" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Python Foundations Certification</h3>
+                        <p class="timeline-company">Infosys Springboard</p>
+                        <p class="timeline-description">
+                            • Completed comprehensive Python programming certification<br>
+                            • Gained proficiency in Python fundamentals and core concepts
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Data Engineering</h3>
+                        <p class="timeline-company">IVIS Lab</p>
+                        <p class="timeline-description">
+                            • Worked on data engineering projects and pipelines<br>
+                            • Gained hands-on experience with data processing and analysis
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Mobile Application Development Intern</h3>
+                        <p class="timeline-company">Internship</p>
+                        <p class="timeline-description">
+                            • Implemented responsive UI components and converted design mockups to Flutter widgets<br>
+                            • Developed navigation flows and routing systems for seamless user experience<br>
+                            • Created and validated forms with proper input handling and error management<br>
+                            • Collaborated with team members to integrate frontend with backend services
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="publications" id="publications">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <div class="publication-card">
+                <div class="publication-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="publication-content">
+                    <h3>A Review on RAG-Based Student Assistant Chatbot using LangChain</h3>
+                    <p class="publication-journal">EPRA International Journal of Research and Development (IJRD)</p>
+                    <p class="publication-details">VOL.10 Issue 8, August 2025</p>
+                    <a href="https://doi.org/10.36713/epra23698" target="_blank" class="publication-doi">
+                        <i class="fas fa-external-link-alt"></i> DOI: 10.36713/epra23698
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title">Academic Journey</h2>
+            <div class="education-certifications-wrapper">
+                <div class="education-timeline">
+                    <div class="education-item">
+                        <div class="education-year">2022 – 2026</div>
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="education-content">
+                                <h3>B.E. in Computer Science (Data Science)</h3>
+                                <p class="education-institution">ATME College of Engineering, Mysuru</p>
+                                <p class="education-university">Visvesvaraya Technological University, Belagavi</p>
+                                <p class="education-cgpa">CGPA: <strong>8.37</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-year">2020 – 2022</div>
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="education-content">
+                                <h3>Pre-University (PUC)</h3>
+                                <p class="education-institution">JSS PU College, SJCE Campus, Mysuru</p>
+                                <p class="education-cgpa">Percentage: <strong>91.17%</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-year">2019 – 2020</div>
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <div class="education-content">
+                                <h3>SSLC</h3>
+                                <p class="education-institution">Sri Kalabhayaveshwara High School, Kanakapura</p>
+                                <p class="education-cgpa">Percentage: <strong>94.72%</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certifications-sidebar" id="certifications">
+                    <h3 class="sidebar-title">Certifications</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <h4>AI & Machine Learning</h4>
+                                <p>AI/ML fundamentals and applications</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <h4>Web Development</h4>
+                                <p>Full Stack Web Development</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <h4>Python Programming</h4>
+                                <p>Advanced Python programming</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm currently looking for internship and fresher opportunities. Feel free to reach out!</p>
+                    <div class="contact-links">
+                        <a href="mailto:vivekvvivekv70@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>vivekvvivekv70@gmail.com</span>
+                        </a>
+                        <a href="https://github.com/Vivek7892" target="_blank" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/vivek-v-a0a41225a" target="_blank" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Vivek V. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Vivek7892" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/vivek-v-a0a41225a" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:vivekvvivekv70@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
