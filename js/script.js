@@ -146,120 +146,57 @@ if (skillsSlider && prevBtn && nextBtn) {
 }
 
 // Contact Form with Web3Forms Integration
-const contactForm = document.getElementById('contactForm');
+const contactForm = document.querySelector('.contact-form');
 
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    
-    // Validation
-    if (!name || !email || !message) {
-        showNotification('Please fill in all fields', 'error');
-        return;
-    }
-    
-    if (!isValidEmail(email)) {
-        showNotification('Please enter a valid email address', 'error');
-        return;
-    }
-    
-    // Disable button and show loading
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
-    
-    try {
-        // Send to Web3Forms
-        const formData = new FormData();
-        formData.append('access_key', 'f7f73c23-e47f-4a04-871e-011d255f6eab'); // Replace with your key
-        formData.append('name', name);
-        formData.append('email', email);
-        formData.append('message', message);
-        formData.append('subject', 'New Portfolio Contact from ' + name);
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
         
-        const response = await fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            body: formData
-        });
+        const formData = new FormData(contactForm);
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const successMsg = document.getElementById('form-success');
         
-        const data = await response.json();
+        // Disable button and show loading
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
         
-        if (data.success) {
-            showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-            contactForm.reset();
-        } else {
-            throw new Error('Form submission failed');
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                if (successMsg) {
+                    successMsg.style.display = 'block';
+                    successMsg.textContent = '✓ Message sent successfully!';
+                }
+                contactForm.reset();
+                setTimeout(() => {
+                    if (successMsg) successMsg.style.display = 'none';
+                }, 5000);
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            if (successMsg) {
+                successMsg.style.display = 'block';
+                successMsg.style.color = '#ef4444';
+                successMsg.textContent = '✗ Failed to send. Please try again.';
+            }
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
         }
-    } catch (error) {
-        showNotification('Failed to send message. Please try again or email directly.', 'error');
-    } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
-    }
-});
+    });
+}
 
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
-
-function showNotification(message, type) {
-    // Create notification element
-    const notification = document.createElement('div');
-    notification.textContent = message;
-    notification.style.cssText = `
-        position: fixed;
-        top: 100px;
-        right: 20px;
-        padding: 1rem 2rem;
-        background: ${type === 'success' ? '#10b981' : '#ef4444'};
-        color: white;
-        border-radius: 8px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        z-index: 10000;
-        animation: slideIn 0.3s ease;
-    `;
-    
-    document.body.appendChild(notification);
-    
-    // Remove notification after 3 seconds
-    setTimeout(() => {
-        notification.style.animation = 'slideOut 0.3s ease';
-        setTimeout(() => {
-            document.body.removeChild(notification);
-        }, 300);
-    }, 3000);
-}
-
-// Add animation keyframes for notifications
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideIn {
-        from {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    
-    @keyframes slideOut {
-        from {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        to {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-    }
-`;
-document.head.appendChild(style);
 
 // Typing effect for hero subtitle (optional enhancement)
 const heroSubtitle = document.querySelector('.hero-subtitle');
@@ -351,7 +288,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchGitHubRepos();
     initVisitorCounter();
     initJourneyAnimation();
-    initNetlifyForm();
 });
 
 // GITHUB REPOS FETCHER
@@ -409,21 +345,4 @@ function initJourneyAnimation() {
     journeyItems.forEach(item => observer.observe(item));
 }
 
-// NETLIFY FORM SUCCESS MESSAGE
-function initNetlifyForm() {
-    const form = document.querySelector('form[name="contact"]');
-    if (!form) return;
-    
-    form.addEventListener('submit', (e) => {
-        setTimeout(() => {
-            const successMsg = document.getElementById('form-success');
-            if (successMsg) {
-                successMsg.style.display = 'block';
-                form.reset();
-                setTimeout(() => {
-                    successMsg.style.display = 'none';
-                }, 5000);
-            }
-        }, 1000);
-    });
-}
+
